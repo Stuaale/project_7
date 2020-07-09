@@ -1,0 +1,40 @@
+/* ============================================= */
+/*              Images                           */
+/* ============================================= */
+
+
+
+.main-header img{
+    border-radius: 50%;
+    width: 1.5em;
+    height: 1.5em;
+    margin-left: .8em;
+}
+
+li img{
+    width: 3em;
+    height: 3em;
+}
+
+.bell-icon{
+    width: 1.5em;
+    height: 1.5em;
+
+
+} 
+
+.social-icon{
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    margin: 1em 0 0 .5em;
+    background-color: purple;
+    @include mquery('m'){
+        width: 4em;
+        height: 4em;
+        border-radius: 50%;
+        margin: 1.5em; 
+    }
+    
+}
+

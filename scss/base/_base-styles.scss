@@ -1,0 +1,59 @@
+/* ============================================= */
+/*              Base styles                      */
+/* ============================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+li{
+  list-style: none;
+}
+
+ul{
+  padding: 0;
+  margin: 0;
+}
+
+h1{
+  margin: 0;
+}
+
+h2{
+  margin: .5em .5em;
+
+  }
+
+  h3{
+    margin: .8em;
+  }
+
+h4{
+  margin: 0;
+  font-size: 12px;
+}
+
+
+/* ============================================= */
+/*              Typography                       */
+/* ============================================= */
+
+
+ 
+.toggle-button{
+  float: right;
+  margin-right: 2em;
+
+}
+
+.header{
+  color: white;
+}
+
+

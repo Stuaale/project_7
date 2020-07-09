@@ -1,0 +1,25 @@
+// ======================================
+//  Variables
+// ======================================
+
+// Colors
+$white: #fff;
+
+$color-primary: #58e1c1;
+$color-secondary: #51ddfc;
+
+$color-text: #777777;
+$color-bg: $white;
+
+
+//fonts
+
+$font-primary: 'Lato', sans-serif;
+
+
+// Media Query Breakpoints
+
+$breakpoints:(
+'m': 768px,
+'l': 1024px
+);

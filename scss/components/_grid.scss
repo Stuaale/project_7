@@ -1,0 +1,201 @@
+/* ===================================== 
+  Layout
+======================================== */
+
+.main-header{
+  display: flex;
+  justify-content: space-between;
+  height: 3em;
+}
+
+.header{
+  margin: .2em 0 0 0.5em;
+}
+
+.profile-info{
+  display: flex;
+  margin-top: .7em;
+  justify-content: space-evenly;
+  width: 150px;
+}
+
+.member-name{
+  margin-top: .4em;
+}
+
+.main-header, .main-nav{
+  width: 100%;  
+  background-color: #7477BF;
+}
+
+.main-nav{
+  height: 5em;
+  @include mquery('l'){
+  height:100%
+}
+}
+
+.nav-links{
+  @include flex($dir: row, $wrap: wrap, $just: center);
+  padding-top: .8em;
+  border-top: solid 1px black;
+}
+
+.nav-links li{
+  padding-left: .4em;
+}
+
+.dashboard-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.dashboard-search{
+  width: 80%;
+  background-color: lightgrey;
+  border-bottom-left-radius: 10px;
+  float: right;
+}
+
+.traffic-header{
+  display: flex;
+  justify-content: space-between;
+}
+
+.traffic-nav{
+  display: flex;
+  flex-direction: row;
+  margin-top: 1em;
+  margin-right: .6em;
+
+  & li{
+    margin-left: .5em;
+    border-radius: 8px;
+    border: 1px solid black;
+    height: 1.5em;
+    min-width: 3.5em;
+    text-align: center; 
+  }
+
+}
+
+
+.social-detail{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 1em;
+
+}
+
+.social-container{
+  display: flex;
+  flex-direction: row;
+  border: solid 1px grey;
+  border-radius: 5px;
+  background-color: lightgrey;
+  width: 30%;
+
+  }
+
+
+
+
+
+
+//Body grid container setup
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto; 
+    grid-template-areas: 
+      "header"
+      "nav" 
+      "main";
+    @include mquery ('l') {
+      grid-template-columns:80px 1fr;
+      grid-template-areas: 
+      "header header"
+      "nav main"      
+
+    }
+  }
+
+  header {
+    grid-area: header;
+  }
+  
+  nav {
+    grid-area: nav;  
+  }
+  
+  main {
+    grid-area: main;
+  }
+    //end of body grid container setup
+
+  //main element grid container
+
+  .main-container{
+    display: grid;
+    
+    
+    @include mquery('m'){
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  //end of main element grid container
+
+
+  .dashboard-header, .traffic, .social-section{
+    @include mquery('m'){
+      grid-column: 1 / span 2;
+
+    }
+  }
+
+  .daily-traffic, .new-members-container, .message{
+    @include mquery('m'){
+      grid-column: 1 / span 1;
+
+    }
+  }
+
+  .mobile-users, .recent-activity-container, .settings{
+
+    @include mquery('m'){
+      grid-column: 2 / span 1;
+    }
+  }
+
+  .traffic, 
+  .social-section,   
+  .daily-traffic, 
+  .new-members-container, 
+  .message
+  .mobile-users,
+  .recent-activity-container{
+    border-bottom: 1px solid lightgrey;
+  }
+
+  .widget-container-half, .widget-cotainer-full{
+    width: 95vw;
+    }
+
+  .widget-container-half{
+    @include mquery ('m'){
+      width: 45vw;
+    }
+  }
+
+  .widget-cotainer-full{
+    @include mquery ('m'){
+      width: 90vw;
+    }
+  }
+
+
+

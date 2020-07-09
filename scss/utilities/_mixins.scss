@@ -1,0 +1,43 @@
+// =========================================
+//  Mixins
+// =========================================
+
+// Image Styling
+@mixin img ($max-width:null, $width:null, $height:null, $padding:null){ 
+  margin: 0px;
+  width: $width;
+  max-width: $max-width;
+  height: $height;
+  padding: $padding;
+  @content;
+}
+
+//Flex container
+
+@mixin flex($dir: null, $wrap: null,  $just: null, $basis: null){
+  display: flex;
+  flex-basis: $basis;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+  justify-content: $just;
+  @content;
+}
+
+// Media Queries
+@mixin mquery ($break) {
+  $value: map-get($breakpoints, $break);
+  $m: map-get($breakpoints, 'm');
+
+  @if $value < $m {
+    @media (min-width: $value) {
+      @content;
+    } 
+  } @else {
+      @media (min-width: $value) {
+        @content;       
+      }             
+
+    }
+  }
+
+
