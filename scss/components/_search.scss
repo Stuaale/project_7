@@ -10,15 +10,17 @@ input[type="search"]{
   height: 2em;
   outline: 0;
   padding: 15px;
-  width: 60%;
+  width: 70%;
   background-color: #e8eeef;
   color: #4B6B70;
   box-shadow: 0 2px 0 rgba(0,0,0,0.03) inset;
   border-radius: 5px;
-  margin-top: .7em;
+  margin-top: .6em;
   margin-right: .5em;
   float: right;
-
+  @include mquery ('m'){
+    margin-top: 1em;
+  }
 }
 
 

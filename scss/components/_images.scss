@@ -4,39 +4,50 @@
 
 
 
-.main-header img{
+.main-header img, .member-info img{
     border-radius: 50%;
     width: 2.5em;
     height: 2.5em;
-    margin-left: 1em;
+    @include mquery ('m') {
+     width: 3em;
+     height: 3em;
+        
 }
-
-li img{
-    width: 3em;
-    height: 3em;
 }
 
 .bell-icon{
     width: 2em;
     height: 2em;
     padding-top: .3em;
-
-
+    @include mquery ('m') {
+    width: 2.5em;
+    height: 2.5em;
+    margin-right: 2em;
+}
 } 
 
+.main-nav img{
+    width: 3em;
+    height: 3em;
+}
+
 .social-icon{
-    width: 2em;
-    height: 2em;
+    fill: white;
+    width: 3em;
+    height: 3em;
     border-radius: 50%;
-    margin: 1em 0 0 .5em;
-    background-color: $secondary-color;
-    fill: $white;
+    margin: 1.8em 0 0 2em;
+    background-color: $primary-color;
     @include mquery('m'){
-        width: 4em;
-        height: 4em;
+        width: 5em;
+        height: 5em;
         border-radius: 50%;
         margin: 1.5em; 
     }
-    
+    & path{
+        fill:white;
+        height: 50px;
+        width: 50px;
+    }
 }
 

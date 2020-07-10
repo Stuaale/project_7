@@ -351,12 +351,11 @@ template {
 /* ============================================= */
 * {
   box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 body {
   margin: 0;
-  font-family: "Source Sans Pro", sans-serif;
-  border: solid 5px red;
 }
 
 li {
@@ -411,14 +410,19 @@ input[type=search] {
   height: 2em;
   outline: 0;
   padding: 15px;
-  width: 60%;
+  width: 70%;
   background-color: #e8eeef;
   color: #4B6B70;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.03) inset;
   border-radius: 5px;
-  margin-top: 0.7em;
+  margin-top: 0.6em;
   margin-right: 0.5em;
   float: right;
+}
+@media (min-width: 768px) {
+  input[type=search] {
+    margin-top: 1em;
+  }
 }
 
 input {
@@ -436,16 +440,16 @@ input:focus {
 /* ============================================= */
 /*              Images                           */
 /* ============================================= */
-.main-header img {
+.main-header img, .member-info img {
   border-radius: 50%;
   width: 2.5em;
   height: 2.5em;
-  margin-left: 1em;
 }
-
-li img {
-  width: 3em;
-  height: 3em;
+@media (min-width: 768px) {
+  .main-header img, .member-info img {
+    width: 3em;
+    height: 3em;
+  }
 }
 
 .bell-icon {
@@ -453,58 +457,109 @@ li img {
   height: 2em;
   padding-top: 0.3em;
 }
+@media (min-width: 768px) {
+  .bell-icon {
+    width: 2.5em;
+    height: 2.5em;
+    margin-right: 2em;
+  }
+}
+
+.main-nav img {
+  width: 3em;
+  height: 3em;
+}
 
 .social-icon {
-  width: 2em;
-  height: 2em;
+  fill: white;
+  width: 3em;
+  height: 3em;
   border-radius: 50%;
-  margin: 1em 0 0 0.5em;
-  background-color: #4D4C71;
-  fill: #fff;
+  margin: 1.8em 0 0 2em;
+  background-color: #7477BF;
 }
 @media (min-width: 768px) {
   .social-icon {
-    width: 4em;
-    height: 4em;
+    width: 5em;
+    height: 5em;
     border-radius: 50%;
     margin: 1.5em;
   }
+}
+.social-icon path {
+  fill: white;
+  height: 50px;
+  width: 50px;
 }
 
 /* ===================================== 
   Layout
 ======================================== */
 .main-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  height: 5em;
-  max-width: 100%;
+  text-align: center;
+  height: 8em;
   background-color: #7477BF;
+}
+@media (min-width: 768px) {
+  .main-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    height: 5em;
+    background-color: #7477BF;
+  }
 }
 
 .header {
-  margin: 0.4em 0 0 0.5em;
+  margin-top: 0.4em;
+}
+@media (min-width: 768px) {
+  .header {
+    margin: 0.4em 0 0 0.5em;
+  }
 }
 
 .profile-info {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 1em;
-  margin-right: 0.5em;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .profile-info {
+    padding: 0 1.3em;
+  }
+}
+
+.profile-detail {
+  display: flex;
+  flex-direction: row;
+  margin-left: 2em;
+}
+@media (min-width: 768px) {
+  .profile-detail {
+    margin-left: 0;
+    padding: 0 2em;
+    height: 3.5em;
+    border-left: solid 1px black;
+  }
 }
 
 .member-name {
   margin-top: 1em;
-  margin-left: 0.5em;
+  margin-left: 1em;
+}
+@media (min-width: 768px) {
+  .member-name {
+    margin-left: 1.5em;
+  }
 }
 
 .main-nav {
   height: 5em;
   background-color: #4D4C71;
-  max-width: 100%;
 }
 @media (min-width: 768px) {
   .main-nav {
@@ -515,45 +570,52 @@ li img {
 .nav-links {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  padding-top: 0.8em;
-  border-top: solid 1px black;
-}
-
-.nav-links li {
-  margin-left: 3em;
+  justify-content: space-between;
+  padding: 0.5em 3em;
+  margin-top: 0.5em;
 }
 @media (min-width: 768px) {
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5em;
+  }
+}
+
+@media (min-width: 768px) {
   .nav-links li {
-    margin-left: 0;
-    margin-top: 2em;
+    margin: 0 0.5em;
+    padding: 1em 0;
   }
 }
 
 .dashboard-header {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-between;
+}
+@media (min-width: 768px) {
+  .dashboard-header {
+    height: 4em;
+  }
 }
 
 .dashboard-search {
-  width: 80%;
   background-color: lightgrey;
-  border-bottom-left-radius: 10px;
+  width: 80%;
+  border-bottom-left-radius: 20px;
 }
 
 .traffic-header {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .traffic-nav {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   margin-top: 1em;
   margin-right: 0.6em;
 }
@@ -571,17 +633,93 @@ li img {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  padding: 1em;
+  padding: 0 0.6em 0.6em 0.6em;
+}
+@media (min-width: 768px) {
+  .social-detail {
+    padding: 1em;
+  }
 }
 
 .social-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  border: solid 1px grey;
+  border: solid 1px lightgrey;
   border-radius: 5px;
-  background-color: lightgrey;
-  width: 25%;
+  background-color: #F8F9F9;
+  width: 32%;
+}
+@media (min-width: 768px) {
+  .social-container {
+    height: 125px;
+  }
+}
+
+.social-text {
+  margin-left: 2em;
+}
+@media (min-width: 768px) {
+  .social-text {
+    margin: 1em 0 0.1em 0.1em;
+  }
+}
+@media (min-width: 1024px) {
+  .social-text {
+    margin: 1em 0 0.5em 2em;
+  }
+}
+.social-text h5 {
+  color: #7477BF;
+  font-weight: bold;
+  font-size: 1em;
+}
+@media (min-width: 768px) {
+  .social-text h5 {
+    font-size: 1.2em;
+    margin: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .social-text h5 {
+    font-size: 1.8em;
+  }
+}
+.social-text p {
+  color: grey;
+  font-size: 1.5em;
+}
+@media (min-width: 768px) {
+  .social-text p {
+    font-size: 2em;
+    margin: 0.2em 0;
+  }
+}
+@media (min-width: 1024px) {
+  .social-text p {
+    font-size: 2.5em;
+    margin: 0.2em 0;
+  }
+}
+
+.member-info {
+  height: 4.2em;
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+  flex-direction: row;
+}
+.member-info p {
+  margin: 0;
+}
+.member-info img {
+  margin-left: 1em;
+}
+
+.members-text {
+  margin-left: 1.5em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .grid-container {
@@ -609,11 +747,12 @@ main {
   grid-area: main;
 }
 
-.main {
+main {
   display: grid;
+  grid-template-areas: main;
 }
 @media (min-width: 768px) {
-  .main {
+  main {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -625,7 +764,7 @@ main {
 }
 
 @media (min-width: 768px) {
-  .daily-traffic, .new-members-container, .message {
+  .traffic-mobile-section, .message {
     grid-column: 1/span 1;
   }
 }

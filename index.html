@@ -11,15 +11,19 @@
 
 <body class = "grid-container"><!--Body Grid container-->
 
+
   <header class="main-header">
       <h1 class="header">RevStats</h1>
       <div class="profile-info">
         <div class="bell-icon">
           <object data="icons/icon-bell.svg" type="image/svg+xml" class="bell-svg"></object>
-        </div>        
-          <img src = "images/member-1.jpg">
-          <h4 class="member-name">PlaceHolder</h4>
+        </div>
+ 
+      <div class="profile-detail">     
+          <img src = "images/member-1.jpg" alt="user-profile-image">
+          <h4 class="member-name">Name</h4>
       </div>
+      </div> 
   </header>
 
   <nav class="main-nav">
@@ -31,7 +35,7 @@
       </ul>
   </nav>
 
-  <main><!--Main Grid container-->
+  <main class="main-container"><!--Main Grid container-->
 
     <div class="dashboard-header"><!--row1span2-->
       <h2>Dashboard</h2>
@@ -46,7 +50,7 @@
     </div>
 
 
-    <section class="traffic"> <!--row2san2-->
+    <div class="traffic"> <!--row2san2-->
       <div class = "traffic-header">
         <h3>Traffic</h3>
           <ul class="traffic-nav">
@@ -60,27 +64,28 @@
           <!--line graph to be inserted to canvas-->
           <canvas id = "traffic-chart"></canvas>
         </div> 
-    </section>
+    </div>
 
-
-    <section class="daily-traffic"><!--row3col1-->
+    <div class="traffic-mobile-section">
+    <div class="daily-traffic"><!--row3col1-->
         <h3>Daily Traffic</h3>
           <div class="widget-container-half">
             <!--Bar graph to be attached to...-->
             <canvas id="daily-traffic-chart"></canvas>
           </div>
-    </section>
+    </div>
 
-    <section class="mobile-users"><!--row3col2-->
+    <div class="mobile-users"><!--row3col2-->
         <h3>Mobile Users</h3>
           <div class="widget-container-half">
             <!--Bar graph to be attached to...-->
             <canvas id="mobile-users-chart"></canvas>
           </div>  
-    </section>
+    </div>
+  </div>
  
 
-    <section class="social-section"> <!--row4span2-->   
+    <div class="social-section"> <!--row4span2-->   
 
       <h3>Social Stats</h3>
 
@@ -143,10 +148,10 @@
         </div><!--end of 3rd social container-->
 
       </div><!--end of social details div-->
-    </section>
+    </div>
 
 
-    <section class="new-members-container"><!--row5col1-->
+    <div class="new-members-container"><!--row5col1-->
       <h3>New Members</h3>
 
         <div class = "member-info">
@@ -154,8 +159,10 @@
             <div class="members-text">
               <p>Victoria Chambers</p>
               <a href="#">victoria.chambers80@example.com</a>
-            </div> 
-            <p>10/15/15</p>
+            </div>
+            <div class="join-date" >
+              <p>10/15/15</p>
+          </div>
         </div>
 
         <div class = "member-info">
@@ -185,9 +192,9 @@
           <p>10/15/15</p>
         </div>
 
-    </section>
+    </div>
 
-    <section class="recent-activity-container"><!--row5col2-->
+    <div class="recent-activity-container"><!--row5col2-->
       <h3>Recent Activity</h3>
 
         <div class = "member-info">
@@ -234,11 +241,11 @@
           <p>4 hours ago</p>
         </div>
   
-    </section>
+    </div>
 
 
 
-    <section class="message"><!--row6col1-->
+    <div class="message"><!--row6col1-->
       <h3>New Members</h3>
 
         <form class = "widget-container-half" placeholder="Search for user" class="form-field" id="userField">
@@ -246,9 +253,9 @@
           <button class="button-primary" id="send">Send</button>
         </form>
 
-    </section>  
+    </div>  
 
-    <section class="settings"><!--row6col2-->
+    <div class="settings"><!--row6col2-->
       <h3>Settings</h3>
 
         <label class="switch-light switch-ios"onclick>
@@ -324,9 +331,10 @@
           <button class="button-disabled" id="cancel">Cancel</button>
         </div>
 
-    </section>
+      </div>
 
 
 </main>
 </body>
 </html>
+
