@@ -3,39 +3,38 @@
 ======================================== */
 
 .main-header{
-  display: flex;
-  justify-content: space-between;
+  @include flex($dir: row, $just: space-between);
   height: 5em;
-  width: 100%;  
+  max-width: 100%;  
   background-color: $primary-color;
 }
 
 .header{
-  margin: .2em 0 0 0.5em;
+  margin: .4em 0 0 0.5em;
 }
 
 .profile-info{
-  display: flex;
-  flex-direction: row;
-  margin-top: .7em;
+  @include flex($dir: row, $wrap: wrap, $just: space-between);
+  margin-top: 1em;
+  margin-right: .5em;
 }
 
 .member-name{
-  margin-top: .4em;
+  margin-top: 1em;
+  margin-left: .5em;
 }
 
 .main-nav{
   height: 5em;
-  width: 100%;
   background-color: $secondary-color;
+  max-width: 100%;
   @include mquery('m'){
   height:100%;
-
 }
 }
 
 .nav-links{
-  @include flex($dir: row, $wrap: wrap, $just: center);
+  @include flex($dir: row, $just: center);
   padding-top: .8em;
   border-top: solid 1px black;
 }
@@ -43,41 +42,35 @@
 .nav-links li{
   margin-left: 3em;
   @include mquery('m'){
-    margin-left: .7em;
+    margin-left: 0;
     margin-top: 2em;
   }
 }
 
 .dashboard-header{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  @include flex($dir: row, $wrap: wrap, $just: space-between);
 }
 
 .dashboard-search{
   width: 80%;
   background-color: lightgrey;
   border-bottom-left-radius: 10px;
-  float: right;
 }
 
 .traffic-header{
-  display: flex;
-  justify-content: space-between;
+  @include flex($dir: row, $wrap: wrap, $just: space-between);
 }
 
 .traffic-nav{
-  display: flex;
-  flex-direction: row;
+  @include flex($dir: row, $wrap: wrap,);
   margin-top: 1em;
   margin-right: .6em;
-
   & li{
     margin-left: .5em;
     border-radius: 8px;
     border: 1px solid black;
     height: 1.5em;
-    min-width: 3.5em;
+    min-width: 4em;
     text-align: center; 
   }
 
@@ -85,26 +78,18 @@
 
 
 .social-detail{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  @include flex($dir: row, $wrap: wrap, $just: space-evenly);
   padding: 1em;
 
 }
 
 .social-container{
-  display: flex;
-  flex-direction: row;
+  @include flex($dir: row, $wrap: wrap);
   border: solid 1px grey;
   border-radius: 5px;
   background-color: lightgrey;
   width: 25%;
-
-  }
-
-
-
-
+    }
 
 
 //Body grid container setup
@@ -137,18 +122,18 @@
   main {
     grid-area: main;
   }
-    //end of body grid container setup
+    // end of body grid container setup
 
-  //main element grid container
+  // main element grid container
 
-  .main-container{
+ .main{
     display: grid;      
     @include mquery('m'){
       grid-template-columns: 1fr 1fr;
     }
   }
 
-  //end of main element grid container
+  // end of main element grid container
 
 
   .dashboard-header, .traffic, .social-section{

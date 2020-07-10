@@ -17,7 +17,7 @@ input[type="search"]{
   border-radius: 5px;
   margin-top: .7em;
   margin-right: .5em;
-
+  float: right;
 
 }
 
@@ -29,5 +29,9 @@ input{
   background-color: white;
   border: solid 1px lightgrey;
 }
+}
+
+.form-field{
+  max-width: 90%;
 }
 
