@@ -66,7 +66,7 @@
         </div> 
     </div>
 
-    <div class="traffic-mobile-section">
+
     <div class="daily-traffic"><!--row3col1-->
         <h3>Daily Traffic</h3>
           <div class="widget-container-half">
@@ -82,7 +82,7 @@
             <canvas id="mobile-users-chart"></canvas>
           </div>  
     </div>
-  </div>
+
  
 
     <div class="social-section"> <!--row4span2-->   
@@ -155,13 +155,13 @@
       <h3>New Members</h3>
 
         <div class = "member-info">
-            <img src = "images/member-1.jpg" class="profile-image">
-            <div class="members-text">
-              <p>Victoria Chambers</p>
-              <a href="#">victoria.chambers80@example.com</a>
-            </div>
-            <div class="join-date" >
-              <p>10/15/15</p>
+          <img src = "images/member-1.jpg" class="profile-image">
+          <div class="members-text">
+            <p>Victoria Chambers</p>
+            <a href="#">victoria.chambers80@example.com</a>
+          </div>
+          <div class="join-date" >
+            <p>10/15/15</p>
           </div>
         </div>
 
@@ -171,7 +171,9 @@
             <p>Dale Byrd</p>
             <a href="#">dale.byrd80@example.com</a>
           </div> 
-          <p>10/15/15</p>
+          <div class="join-date" >
+            <p>10/15/15</p>
+          </div>
         </div>
 
         <div class = "member-info">
@@ -180,7 +182,9 @@
             <p>Dawn Wood</p>
             <a href="#">dawn.wood80@example.com</a>
           </div> 
-          <p>10/15/15</p>
+          <div class="join-date" >
+            <p>10/15/15</p>
+          </div>  
         </div>
 
         <div class = "member-info">
@@ -189,7 +193,9 @@
             <p>Dan Oliver</p>
             <a href="#">dan.oliver80@example.com</a>
           </div> 
-          <p>10/15/15</p>
+          <div class="join-date" >
+            <p>10/15/15</p>
+          </div>
         </div>
 
     </div>
@@ -201,58 +207,61 @@
             <img src = "images/member-1.jpg" class="profile-image">
             <div class="members-text">
               <p>Victoria Chambers commented on YourApps's SEO Tips</p>
+              <p>4 hours ago</p>
             </div>
             <div class="selector-arrow">  
               <a href="#">></a>
             </div> 
-            <p>4 hours ago</p>
         </div>
 
         <div class = "member-info">
           <img src = "images/member-2.jpg" class="profile-image">
           <div class="members-text">
             <p>David Byrd commented on YourApps's SEO Tips</p>
+            <p>5 hours ago</p>
           </div>
           <div class="selector-arrow">  
             <a href="#">></a>
           </div> 
-          <p>5 hours ago</p>
         </div>
 
         <div class = "member-info">
           <img src = "images/member-3.jpg" class="profile-image">
           <div class="members-text">
             <p>Dawn Wood commented on YourApps's SEO Tips</p>
+            <p>5 hours ago</p>
           </div>
           <div class="selector-arrow">  
             <a href="#">></a>
           </div> 
-          <p>5 hours ago</p>
         </div>
 
         <div class = "member-info">
           <img src = "images/member-4.jpg" class="profile-image">
           <div class="members-text">
             <p>Dan Oliver commented on YourApps's SEO Tips</p>
+            <p>4 hours ago</p>
           </div>
           <div class="selector-arrow">  
             <a href="#">></a>
           </div> 
-          <p>4 hours ago</p>
         </div>
   
-    </div>
+    </div> <!--end of recent activity container-->
 
 
 
     <div class="message"><!--row6col1-->
-      <h3>New Members</h3>
-
+      <h3>Message </h3>
+        <div class = "member-search">
+          <input type="search" placeholder="Search for user..."/>
+        </div>
         <form class = "widget-container-half" placeholder="Search for user" class="form-field" id="userField">
           <textarea placeholder="Message for User" id="messageField" class="form-area"></textarea>
-          <button class="button-primary" id="send">Send</button>
         </form>
-
+        <div class="button-primary" >
+          <button id="send">Send</button>
+        </div>
     </div>  
 
     <div class="settings"><!--row6col2-->
@@ -281,7 +290,7 @@
             <a></a>
           </span>
         </label>
-
+        
         <select class="form-field" id="timezone">
           <option selected="selected">Select a Timezone</option>
           <option value="-12:00">(GMT -12:00) Eniwetok, Kwajalein</option>
@@ -326,10 +335,11 @@
           <option value="+14:00">(GMT +14:00) Line Islands, Tokelau</option>
         </select>
 
-        <div class="settings-button">
-          <button class="button-primary" id="save">Save</button>
-          <button class="button-disabled" id="cancel">Cancel</button>
-        </div>
+          <div class="button-settings">
+            <button id="save">Save</button>
+            <button id="cancel">Cancel</button>
+          </div>
+
 
       </div>
 

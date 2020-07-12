@@ -3,18 +3,18 @@
 // ======================================
 
 // Colors
-$white: #fff;
+$background-color: #fff;
 
 $primary-color: #7477BF ;
 $secondary-color: #4D4C71;
+$element-background-color: #F8F9F9;
 
 $color-text: #777777;
-$color-bg: $white;
 
 
 //fonts
 
-$font-primary: 'Lato', sans-serif;
+$font-family: 'Source Sans Pro', sans-serif;
 
 
 // Media Query Breakpoints
@@ -23,3 +23,5 @@ $breakpoints:(
 'm': 768px,
 'l': 1024px
 );
+
+
