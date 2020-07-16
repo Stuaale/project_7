@@ -1,0 +1,22 @@
+
+
+.widget-container-half{
+    width: 100%;
+    height: 275px;
+    padding: 1em;
+    margin-right: 0;  
+  @include mquery ('m'){
+    height: 350px;
+  }
+}
+
+.widget-container-full{
+    width: 100%;
+    padding: 1em;
+    height: 250px;
+  @include mquery ('m'){
+
+    height: 300px;
+
+  }
+}
