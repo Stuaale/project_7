@@ -13,7 +13,7 @@
 
 
   <header class="main-header">
-      <h1 class="header">RevStats</h1>
+      <h1 class="header">RevStats <small>	&trade;</small></h1>
       <div class="profile-info">
        
       <div class="bell-container"> 
@@ -68,10 +68,10 @@
       <div class = "traffic-header">
         <h3>Traffic</h3>
           <ul class="traffic-nav">
-            <li class="active">Hourly</li>
-            <li class="legend">Daily</li>
-            <li class="legend">Weekly</li>
-            <li class="legend">Monthly</li>
+            <li>Hourly</li>
+            <li>Daily</li>
+            <li>Weekly</li>
+            <li>Monthly</li>
           </ul>
       </div>
         <div class="widget-container-full">
@@ -279,24 +279,24 @@
     <div class="settings"><!--row6col2-->
       <h3>Settings</h3>
 
-        <label class="switch-light switch-ios"onclick>
-          <input type="checkbox">    
+        <label class="switch-light switch-ios">   
           <strong class="toggle-text">
             Send Email Notifications 
-          </strong>    
-          <span class="toggle-button" style="width: 80px;">
+          </strong>   
+          <input type="checkbox" id="email-notifications">  
+          <span class="toggle-button" style="width: 80px;" >
             <span>Off</span>
             <span>On</span>
             <a></a>
           </span>
         </label>
 
-        <label class="switch-light switch-ios"  onclick>
-          <input type="checkbox">    
+        <label class="switch-light switch-ios" >
+          <input type="checkbox" id="profile-settings">    
           <strong class="toggle-text">
             Set Profile to public 
           </strong>    
-          <span class="toggle-button" style="width: 80px;">
+          <span class="toggle-button" style="width: 80px;" id="profile-settings">
             <span>Off</span>
             <span>On</span>
             <a></a>

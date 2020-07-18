@@ -24,6 +24,9 @@ ul{
 h1{
   margin: 0;
   font-size: 2.5em;
+  background: -webkit-linear-gradient(180deg, darken($icon-green,10%), $light-text-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 h2{
@@ -32,12 +35,12 @@ h2{
   }
 
   h3{
-    margin: .8em;
+    margin: 1.1em;
   }
 
 h4{
   margin: 0;
-  font-size: .8em;
+  font-size: 1em;
 }
 
 

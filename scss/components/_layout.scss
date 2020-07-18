@@ -191,14 +191,18 @@ main{
     margin: 0 .5em;
     padding: 1em 0;
   }
+  &:hover{
+    transform: scale(1.05);
+  }
 }
 }
 
 /* ===================================== 
   Main Section
 ======================================== */
-
-//alert banner
+/* ===================================== 
+  Alert Banner
+======================================== */
 
 #alert{
   height: 30px;
@@ -206,6 +210,9 @@ main{
   margin: 1em 2em;
   background-color: $primary-color;
   border-radius: 5px;
+&:hover{
+  transform: scale(1.01)
+}
 }
 
 .alert-banner, .close-banner{
@@ -221,12 +228,9 @@ main{
 }
 
 
-
-//dashboard section
-
-.legend{
-  background-color: rgb(24, 92, 24, 0);
-}
+/* ===================================== 
+  Dashboard Section
+======================================== */
 
 .dashboard-header{
   @include flex($dir: row, $just: space-between);
@@ -261,12 +265,14 @@ main{
 }
 
 .selected{
-  background-color: green;
+  background-color: $icon-green;
 }
 
 //dashboard end
 
-//social section
+/* ===================================== 
+Social Section
+======================================== */
 
 .social-detail{
   @include flex($dir: row, $wrap: wrap, $just: space-evenly);
@@ -286,7 +292,10 @@ main{
     height: 125px;
     margin: 0 auto;
     }
+&:hover{
+  transform: scale(1.05);
 
+}
   }
 
   .social-text{
@@ -335,7 +344,9 @@ main{
 
 //end of social section
 
-//member section
+/* ===================================== 
+  Member Section
+======================================== */
 
 .member-info{
   margin-top: .5em;
@@ -343,6 +354,9 @@ main{
   height: 4.2em;
   border-bottom: 1px solid lightgrey;
   @include flex($dir: row);
+  &:hover{
+    transform: scale(1.01);
+  }
   & p{
     margin:0;
   }
@@ -388,7 +402,9 @@ main{
 
 //end of member info section
 
-//member search and settings section
+/* ===================================== 
+  Member Search and Setting sections
+======================================== */
 
 .member-search{
   width: 100%;
