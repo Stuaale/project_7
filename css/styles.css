@@ -693,7 +693,6 @@ main {
 
 main {
   display: grid;
-  grid-template-areas: main;
 }
 @media (min-width: 768px) {
   main {
@@ -838,6 +837,7 @@ main {
 @media (min-width: 768px) {
   .main-nav {
     height: 100%;
+    box-shadow: 5px 5px 5px white;
   }
 }
 
@@ -880,6 +880,7 @@ main {
   margin: 1em 2em;
   background-color: #7477BF;
   border-radius: 5px;
+  cursor: pointer;
 }
 #alert:hover {
   transform: scale(1.01);
@@ -914,7 +915,7 @@ main {
 }
 
 .dashboard-search {
-  background-color: #F8F9F9;
+  background-color: #eaeded;
   width: 80%;
   border-bottom-left-radius: 20px;
 }
@@ -929,7 +930,9 @@ main {
   display: flex;
   flex-direction: row;
   margin-top: 1em;
-  margin-right: 0.6em;
+  margin-right: 3em;
+  height: 10px;
+  cursor: pointer;
 }
 .traffic-nav li {
   margin-left: 0.5em;
@@ -938,7 +941,6 @@ main {
   height: 1.5em;
   min-width: 4em;
   text-align: center;
-  cursor: pointer;
 }
 
 .selected {

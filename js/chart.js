@@ -45,36 +45,33 @@ function chartUpdate(){
 
 }
 
-let trafficNav = document.getElementsByClassName("selected")
+let trafficNav = document.getElementsByClassName("selected");
 function remove (){
-    trafficNav[0].classList.remove("selected")
+    trafficNav[0].classList.remove("selected");
 }
 
 trafficNavList.addEventListener("click", (event) => {
     remove();
-    trafficNavList = event.target
+    trafficNavList.classList.remove("selected");
+    trafficNavList = event.target;
        if(trafficNavList.innerHTML == "Hourly"){
-        trafficData.labels = hourLabels
-        trafficData.datasets[0].data = hourData
-        chartUpdate()
+        trafficData.labels = hourLabels;
+        trafficData.datasets[0].data = hourData;
+        chartUpdate();
     } else if (trafficNavList.innerHTML == "Daily"){
-        trafficData.labels = dayLabels
-        trafficData.datasets[0].data = dayData
-        chartUpdate()
+        trafficData.labels = dayLabels;
+        trafficData.datasets[0].data = dayData;
+        chartUpdate();
     } else if (trafficNavList.innerHTML == "Weekly"){
-        trafficData.labels = weekLabels
-        trafficData.datasets[0].data = weekData
-        chartUpdate()
+        trafficData.labels = weekLabels;
+        trafficData.datasets[0].data = weekData;
+        chartUpdate();
     } else if (trafficNavList.innerHTML == "Monthly"){
-        trafficData.labels = monthLabels
-        trafficData.datasets[0].data = monthData
-        chartUpdate()
+        trafficData.labels = monthLabels;
+        trafficData.datasets[0].data = monthData;
+        chartUpdate();
     }
 })
-
-
-
-
 
 
 

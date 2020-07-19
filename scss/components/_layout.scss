@@ -39,7 +39,6 @@ main {
 
 main{
   display: grid;     
-  grid-template-areas: main;
   @include mquery('m'){
     grid-template-columns: 1fr 1fr;
   }
@@ -179,6 +178,7 @@ main{
   background-color: $secondary-color;
   @include mquery('m'){
   height:100%;
+  box-shadow: 5px 5px 5px white;
 }
 }
 
@@ -215,6 +215,7 @@ main{
   margin: 1em 2em;
   background-color: $primary-color;
   border-radius: 5px;
+  cursor: pointer;
 &:hover{
   transform: scale(1.01)
 }
@@ -245,7 +246,7 @@ main{
 }
 
 .dashboard-search{
-  background-color: $element-background-color;
+  background-color: darken($element-background-color,5%);
   width: 80%;
   border-bottom-left-radius: 20px;
 }
@@ -257,7 +258,9 @@ main{
 .traffic-nav{
   @include flex($dir: row);
   margin-top: 1em;
-  margin-right: .6em;
+  margin-right: 3em;
+  height: 10px;
+  cursor: pointer;
   & li{
     margin-left: .5em;
     border-radius: 8px;
@@ -265,7 +268,7 @@ main{
     height: 1.5em;
     min-width: 4em;
     text-align: center;
-    cursor: pointer;
+
   }
 
 }
