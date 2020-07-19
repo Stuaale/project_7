@@ -18,19 +18,18 @@ let trafficData = {
     labels: hourLabels,
     datasets: [{
     data: hourData,
-    backgroundColor: 'rgba(116, 119, 191, .4)' ,
+    backgroundColor: 'rgba(116, 119, 191, .5)' ,
     borderWidth: 1 ,
 }]
 };
 
 let trafficOptions = {
     aspectRatio: 2.5,
-    animation: {duration: 3000},
+    animation: {duration: 2000, easing: 'easeInOutElastic'},
     scales: {yAxes: [{ticks: {beginAtZero: true}}]},
     legend: {display: false},
     responsive: true,
     maintainAspectRatio: false,
-    
 };
 
 let trafficChart = new Chart(trafficCanvas, {
@@ -46,8 +45,13 @@ function chartUpdate(){
 
 }
 
+let trafficNav = document.getElementsByClassName("selected")
+function remove (){
+    trafficNav[0].classList.remove("selected")
+}
+
 trafficNavList.addEventListener("click", (event) => {
-    trafficNavList.classList.remove("selected")
+    remove();
     trafficNavList = event.target
        if(trafficNavList.innerHTML == "Hourly"){
         trafficData.labels = hourLabels
@@ -67,6 +71,11 @@ trafficNavList.addEventListener("click", (event) => {
         chartUpdate()
     }
 })
+
+
+
+
+
 
 
 //end of traffic line graph

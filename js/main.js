@@ -11,7 +11,7 @@ badge.innerHTML = alertItemsMenu.length;
 
 if (alertItemsMenu.length > 0){
     bellIcon.style.fill = "#78CF82";
-    bellIcon.style.transition = "ease-in 2s";
+    bellIcon.style.transition = "ease-in 1s";
 }
 
 bellContainer.addEventListener("click", (event) => {
@@ -36,7 +36,7 @@ bellContainer.addEventListener("click", (event) => {
     }
 });
 
-//This scope hides the list item once the client clicks on the close button
+//This scope hides the bell alert list item once the client clicks on the close button
 
 bellContainer.addEventListener("click", (event) => {
     if (event.target.classList == "close"){
@@ -98,19 +98,14 @@ send.addEventListener( 'click' , () => {
 
   //This is the JS to support filter on search box
 
-  let members = ["Victoria Chambers", "Dale Byrd", "Dawn Wood", "Dan Oliver"];
-  let search = document.getElementById("search-list");  
+let members = ["Victoria Chambers", "Dale Byrd", "Dawn Wood", "Dan Oliver"];
+let search = document.getElementById("search-list");  
   
   for (let i = 0; i < members.length; i++){
       let option = document.createElement("option");
       option.value = members[i];
       search.appendChild(option)
   }    
-
-
-
-
-
 
 
 
@@ -155,7 +150,6 @@ if(testStorage() === true){
         alert('Settings successfully saved!');
 
     });
-    console.log(timeZonePref)
     document.getElementById("cancel").addEventListener("click", function() {
         const cancel = confirm('Are you sure you want to cancel changes?');
         if (cancel) {
@@ -167,5 +161,3 @@ if(testStorage() === true){
       });
       loadSettings();
     }
-
-    

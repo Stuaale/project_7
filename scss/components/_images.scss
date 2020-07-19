@@ -3,7 +3,6 @@
 /* ============================================= */
 
 
-
 .main-header img, .member-info img{
     border-radius: 50%;
     width: 2.5em;
@@ -16,6 +15,7 @@
 }
 
 .bell-icon{
+    
     width: 2em;
     height: 2em;
     padding-top: .3em;
@@ -28,6 +28,7 @@
 } 
 .bell-container{
     position: relative;
+    
     margin-right: 50px;
     margin-top: 5px;
 }
@@ -45,8 +46,6 @@
         right: 32px;
   }
 }
-
-
 
 /* --------------------------
   Keyframes 
@@ -70,12 +69,10 @@
     transform-origin: 50% 50%;
 }
 
-.bell-icon .bell-detail{
+.bell-container .bell-icon:hover{
     animation: rotate ease-in-out 2s;
-    &:hover{
-        animation: rotate ease-in-out 1s;      
 }
-}
+
 
 .main-nav img{
     width: 3em;
@@ -106,6 +103,5 @@
         transition: ease-out .5s;
     }
 }
-
 
 

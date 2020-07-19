@@ -1,22 +1,26 @@
-
+/* ============================================= */
+/*              Chart Canvas Settings            */
+/* ============================================= */
 
 .widget-container-half{
-    width: 100%;
-    height: 275px;
-    padding: 1em;
-    margin-right: 0;  
-  @include mquery ('m'){
-    height: 350px;
-  }
+  width: 100vw;
+  height: 40vh;
+  margin: auto; 
+  position: relative; 
+@include mquery ('m'){
+  width: 45vw;
+
+}
 }
 
 .widget-container-full{
-    width: 100%;
-    padding: 1em;
-    height: 250px;
-  @include mquery ('m'){
+  width: 100vw;
+  height: 40vh;
+  position: relative;
+  margin: auto;
+@include mquery ('m'){
+  width: 90vw;
 
-    height: 300px;
-
-  }
 }
+}
+
